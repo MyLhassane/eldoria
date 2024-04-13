@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة إلدوريا</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <h1 class="brind">The Eldoria Gate</h1>
+        <p id="message" style="text-align: center"></p>
+    </nav>
+    <div class="container">
+        <h1 class="title">بوابة إلدوريا: كوكب الأمل الجديد</h1>
+        <p class="description">قد لا تتمكن من العثور على أي شيء حول مدينة أطلانتس.</p>
+        <p>أو يمكنك ذلك!؟</p>
+        <p>دعنا نرى هذا.</p>
+        <div class="puzzle">
+
+
+
+            <h2>فك الشفرة</h2>
+            <p>ماهو الرمز السري لتكشف عن الخطوة التالية في رحلتك:</p>
+
+            <div id="inputWrapper">
+                <input type="text" id="codeInput" placeholder="أكتب الرمز السري...">
+                <button onclick="checkCode()">فحص</button>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script>
+        function checkCode() {
+            var code = document.getElementById("codeInput").value.toLowerCase();
+            var messageElement = document.getElementById("message");
+            if (code === "eldoria" || code === "الدوريا" || code === "إلدوريا") {
+                messageElement.innerText = "تهانينا! لقد كسرت الكود. رحلتك مستمرة...";
+                messageElement.classList.remove("incorrect");
+                messageElement.classList.add("correct");
+                // Add redirection to the next step of the journey
+                setTimeout(() => {
+                    window.location.href = "next_step.html";
+                }, 3000); // Redirect after 3 seconds
+            } else {
+                messageElement.innerText = "شفرة خاطئة. حاول من جديد...";
+                messageElement.classList.remove("correct");
+                messageElement.classList.add("incorrect");
+            }
+        }
+    </script>
+</body>
+
+</html>

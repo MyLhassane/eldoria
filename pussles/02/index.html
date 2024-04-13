@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اللغز رقم 1</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <nav>
+        <h1 class="brind">The Eldoria Gate</h1>
+    </nav>
+
+    <div class="container">
+        <h1 class="title">اللغز رقم 1</h1>
+        <img src="atlantis_rise.jpeg" width="300" alt="Atlantis City rising into Eldoria" class="puzzle-image">
+        <p class="description">ما هي المدينة الأسطورية التي تنهض من الأعماق لتصبح منارة الأمل في إلدوريا؟</p>
+        <div class="options">
+            <button onclick="checkAnswer('Iram-Dhat-al-emad')">إرم ذات العماد</button>
+            <button onclick="checkAnswer('Jinistan')">جينستان</button>
+            <button onclick="checkAnswer('Jabal-Qaf')">جبل قاف</button>
+            <button onclick="checkAnswer('El-Dorado')">الدورادو</button>
+            <button onclick="checkAnswer('Troy')">طروادة</button>
+            <button onclick="checkAnswer('Atlantis')">أتلانتس</button>
+            <button onclick="checkAnswer('Camelot')">كاميلوت</button>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer(city) {
+            if (city === 'Atlantis') {
+                // Redirect to the correct answer page
+                window.location.href = "correct_answer.html";
+            } else {
+                // Redirect to the incorrect answer page with the city name
+                redirectToIncorrectPage(city);
+            }
+        }
+
+        function redirectToIncorrectPage(cityName) {
+            window.location.href = "incorrect_answer.html?city=" + encodeURIComponent(cityName);
+        }
+
+    </script>
+</body>
+
+</html>

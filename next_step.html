@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose an Episode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <h1 class="brind">The Eldoria Gate</h1>
+    </nav>
+
+    <div class="container">
+        <h1 class="title">إختر رقم</h1>
+        <p class="description">حدد رقمًا لتكشف عن لغز الخطوة التالية في رحلتك:</p>
+        <div id="episodeSelection">
+            <button class="episode-btn" onclick="redirectToPuzzle(1)">1</button>
+            <button class="episode-btn" onclick="redirectToPuzzle(2)">2</button>
+            <button class="episode-btn" onclick="redirectToPuzzle(3)">3</button>
+            <!-- Add more buttons for additional episodes -->
+        </div>
+    </div>
+
+    <script>
+        function redirectToPuzzle(episodeNumber) {
+            // Redirect user to the puzzle page corresponding to the selected episode
+            window.location.href = "pussles/0" + episodeNumber; // Change the file naming convention if needed
+        }
+    </script>
+</body>
+
+</html>
