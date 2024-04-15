@@ -4,43 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="اكتشف أسرار إلدوريا، كوكب أسطوري مليء بالأمل والدهشة. اكتشف أطلاله القديمة، والمناظر الطبيعية الفضائية، وجماله السماوي. انضم إلى رحلة البحث عن المعرفة والمغامرة في هذا العالم الساحر.">
-    <meta name="keywords" content="إلدوريا، كوكب أسطوري، مدينة أطلانتس أمل، دهشة، أطلال قديمة، مناظر طبيعية فضائية، جمال سماوي، مغامرة، بحث، استكشاف">
+    <meta name="description"
+        content="اكتشف أسرار إلدوريا، كوكب أسطوري مليء بالأمل والدهشة. اكتشف أطلاله القديمة، والمناظر الطبيعية الفضائية، وجماله السماوي. انضم إلى رحلة البحث عن المعرفة والمغامرة في هذا العالم الساحر.">
+    <meta name="keywords"
+        content="إلدوريا، كوكب أسطوري، مدينة أطلانتس أمل، دهشة، أطلال قديمة، مناظر طبيعية فضائية، جمال سماوي، مغامرة، بحث، استكشاف">
     <title>إلدوريا: كوكب أسطوري مليء بالأمل</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav>
-        <h1 class="brind">The Eldoria Gate</h1>
-        <p id="message" style="text-align: center"></p>
-    </nav>
+    <header>
+        <h1 class="brand">The Eldoria Gate</h1>
+    </header>
+
+
     <div class="container">
         <h1 class="title">بوابة إلدوريا: كوكب الأمل الجديد</h1>
+
+        <!-- Add images of Eldoria -->
+        <div class="eldoria-images">
+            <img src="images/01.jpeg" alt="Eldoria Image 1" class="eldoria-image">
+            <img src="images/02.jpeg" alt="Eldoria Image 2" class="eldoria-image">
+            <img src="images/03.jpeg" alt="Eldoria Image 3" class="eldoria-image">
+        </div>
+
         <p class="description">قد لا تتمكن من العثور على أي شيء حول مدينة أطلانتس.</p>
         <p>أو يمكنك ذلك!؟</p>
         <p>دعنا نرى هذا.</p>
         <div class="puzzle">
-
-
-
+            <p id="message" style="text-align: center"></p>
             <h2>فك الشفرة</h2>
-            <p>ماهو الرمز السري لتكشف عن الخطوة التالية في رحلتك:</p>
-
+            <p>عن مذا كان يبحث صديقنا في جوجل؟</p>
+            <!-- <p>لتكشف عن الخطوة التالية في رحلتك</p> -->
             <div id="inputWrapper">
-                <input type="text" id="codeInput" placeholder="أكتب الرمز السري...">
+                <input type="text" id="codeInput" placeholder="أكتب الرمز السري..." onkeypress="handleKeyPress(event)">
                 <button onclick="checkCode()">فحص</button>
             </div>
-
-            
         </div>
     </div>
 
     <script>
+
+        function handleKeyPress(event) {
+            // Check if the pressed key is Enter (key code 13)
+            if (event.keyCode === 13) {
+                // Call the checkCode function when Enter is pressed
+                checkCode();
+            }
+        }
+
         function checkCode() {
             var code = document.getElementById("codeInput").value.toLowerCase();
             var messageElement = document.getElementById("message");
-            if (code === "eldoria" || code === "الدوريا" || code === "إلدوريا") {
+            if (code === "Atlantis" || code === "اتلانتس" || code === "اطلانتس" || code === "atlantis") {
                 messageElement.innerText = "تهانينا! لقد كسرت الكود. رحلتك مستمرة...";
                 messageElement.classList.remove("incorrect");
                 messageElement.classList.add("correct");

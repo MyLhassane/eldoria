@@ -25,33 +25,44 @@
     src: url('BalonkuRegular-la1w.otf') format('truetype');
 }
 
+/* Background body like a game of adventure */
 
 body {
-    background-color: teal;
+    background-color: #f1f1f1;
     direction: rtl;
     font-size: 20px;
     font-family: 'AmiriQuran-Regular', sans-serif;
 }
 
-.brind {
+.brand {
     font-size: 20px;
     margin-left: 30px;
     font-family: BalonkuRegular-la1w;
-    text-align: left;
+    text-align: center;
 }
+
+
+
+
+header {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
 
 .title {
     font-size: 20px;
-    margin-left: 30px;
     font-family: 'AmiriQuran-Regular', sans-serif;
-    text-align: right;
+    text-align: center;
 }
 
 .description {
     font-size: 24px;
-    margin-right: 30px;
     font-family: BalonkuRegular-la1w;
-    text-align: right;
+    text-align: center;
 }
 
 .container {
@@ -62,6 +73,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -73,8 +86,35 @@ p {
     color: darkcyan;
 }
 
+.eldoria-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust spacing for mobile */
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+.eldoria-image {
+    width: 100%; /* Occupy full width on mobile */
+    max-width: 200px; /* Limit the maximum width of the images */
+    height: auto;
+    margin: 10px; /* Adjust spacing between images */
+    border: 2px solid #fff; /* Add a border around the images */
+    border-radius: 10px; /* Add border radius for a rounded appearance */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.eldoria-image:hover {
+    transform: scale(1.05); /* Enlarge the image on hover */
+}
+
 .puzzle {
     margin-top: 20px;
+}
+
+.puzzle button {
+    margin-top: 16px;
 }
 
 .message {
